@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anonymous function</title>
+	<meta charset="UTF-8">
+
+	<script type="text/javascript">
+		var result = (function(email_id)
+					{
+						var pattern = /[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]/;
+						return pattern.test(email_id);
+					}) ('Praisy1@gmail.com');
+		document.write(result);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
