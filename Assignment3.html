@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form validation</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+
+            function validateForm() {
+        if (document.myForm.fname.value == "" || document.myForm.fPhone.value == "") 
+    {
+        alert("Please fill the mandatory field");
+        return false;
+    }
+}
+        </script>
+
+    </head>
+    <body>
+            <form name="myForm" action = "demo_form.asp" method="post">
+                <h5> <u> Form </u> </h5>
+                Name: <input type="text" name="fname" onblur="return validateForm()"> <br> <br>
+                Email: <input type="email" id="email"
+                                        onblur="(function(id){
+                                            var email_id = document.getElementById(id).value;
+                                            function validate(){
+                                                var regpat = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z_\-\.]+\.[a-zA-Z]/;
+                                                return regpat.test(email_id);
+                                            }
+                                            alert(validate());
+                                        })('email');"> <br> <br>
+                Phone: <input type="text" name="fPhone" onblur="return validateForm()"> <br> <br>
+                Address: <input type="text" name="fAddress"> <br> <br>                
+                
+            </form>
+    </body>
+</html>
