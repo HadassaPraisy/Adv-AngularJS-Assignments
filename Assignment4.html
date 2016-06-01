@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+
+
+<body>
+
+<form name="myform">
+<label for="name"> Name </label>
+  <input  type="text" name="name">
+    <br>
+  <label for="age">Age </label>
+  <input  type="text" name="age">
+    <br>
+  <label for="city">City</label>
+  <input  type="text" name="city">
+    <br>
+  <input type="submit" value="Submit" onClick="details()">
+	
+
+
+		<script type="text/javascript">
+		function details()
+		{
+			var name = document.myform.name.value;
+			var age = document.myform.age.value;
+			var city = document.myform.city.value;
+
+
+
+			 document.writeln("Thank you! You have just entered these details: ");
+			 document.writeln("<pre>");
+             document.writeln("Name : " + name);
+             document.writeln("Age : " + age);
+             document.writeln("City : " + city);
+
+		}
+		
+	</script>
+
+</form>
+</body>
+</html>
