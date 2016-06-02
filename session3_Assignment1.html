@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Constructor</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function cardetails (make,model,year) {
+		this.carmaker = make;
+		this.carmodel = model;
+		this.yearof = year;	
+
+	this.GetDetails = function()
+	{
+		return this.carmaker + "" + "," + this.carmodel + "" + "," + this.yearof;
+	}
+}
+var carobj1 = new cardetails("Honda "," LXI ",2000); 
+var carobj2 = new cardetails("Volks "," ZXI ",2001);
+
+alert(carobj1.GetDetails());
+alert(carobj2.GetDetails());
+
+</script>
+
+</body>
+</html>
