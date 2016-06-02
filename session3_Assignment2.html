@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+</head>
+<body>
+<script type="text/javascript">
+	var x = 10;
+	var y = 5;
+
+	function add() {
+		var zadd = "This is from add private function"; //private
+
+		function addPrivate() {
+			return zadd;
+		}
+		return x+y + ":-" + " " + zadd;
+	}
+
+	function sub() {
+		var zsub = "This is from sub private function";
+
+		function subPrivate() {
+			return zsub;
+		}
+		return x-y + ":-" + " " + zsub;
+	}
+
+	function mul() {
+		var zmul = "This is from mul private function"; 
+
+		function mulPrivate() {
+			return zmul;
+		}
+		return x*y + ":-" + " " + zmul;
+	}
+
+	function div() {
+		var zdiv = "This is from div private function"; 
+		return x/y + ":-" + " " + zdivl
+	}
+
+	alert(add());
+	alert(sub());
+	alert(mul());
+	alert(div());
+
+</script>
+</body>
+</html>
