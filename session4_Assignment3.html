@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inheritance</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function Animalfood(food)
+		{
+			this.Food= food;
+		}
+
+		function Animalname(name)
+		{
+			this.Name = name;
+		}
+
+		var A = new Animalfood("Carrot from Animalfood");
+		var R = new Animalname('Rabbit from Animalname');
+
+R.__proto__ = A; // inhert the properties of Animal using __proto__
+
+alert(R.Name + " " + "likes to eat" + " " + R.Food );
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
