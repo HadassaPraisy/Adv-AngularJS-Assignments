@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"> </script>
+	<title> JQuery Index list</title>
+</head>
+
+<body>
+<ul id="list1">
+	<li> HTML Tutorial</li>
+	<li> MongoDB Tutorial</li>
+	<li> Python Tutorial</li>
+</ul>
+
+	<button id="btn1">Add numbers to the list</button>
+
+	<script type="text/javascript">
+
+		$(document).ready(function ()
+		{
+			$("#btn1").click(addnotolist);
+		});
+
+		function addnotolist()
+		{
+			var children = $("#list1").children("li");
+			console.log(children.length);
+		
+		for (var x=0; x<children.length; x++) 
+		{
+			var text = $(children[x]).html();
+			var newtext = "<b>" + x + ":</b>" + text;
+			$(children).html(newtext);
+		}
+}
+	</script>
+</body>
+
+</html>
