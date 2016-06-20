@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>vehicle form</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script type="text/javascript">
+	function vehicle()
+	{
+			var Name = document.getElementById("fname").value;
+			var Desc = document.getElementById("desc").value;
+			var Cost = document.getElementById("cost").value;
+			var Type = document.getElementById("type").value;
+
+			this.fname = Name;
+			this.desc = Desc;
+			this.cost = Cost;
+			this.type = Type;
+
+			// document.write(Name +"<br>"+ Desc+"<br>" + Cost +"<br>" + Type);
+
+			if(Type == 'two wheeler')
+			{
+				document.write("<h1> Two Wheeler Details </h1>" + "<br>" + "<b> Name: </b>"+Name +"<br>"+ "<b> Description: </b>"+Desc+ "<br>" + "<b> Cost per km: </b>"+Cost +"<br>" +"<b> Vehicle type- </b>"+Type);
+				
+			}
+			else if (Type == 'four wheeler') 
+			{
+				document.write("<h1> Four Wheeler Details </h1>" + "<br>" + "<b> Name: </b>"+Name +"<br>"+ "<b> Description: </b>"+Desc+ "<br>" + "<b> Cost per km: </b>"+Cost +"<br>" +"<b> Vehicle type- </b>"+Type + "<br>" + "<i> Fuel type-CNG </i>");
+			}
+
+			// document.write(Name +"<br>"+ Desc+"<br>" + Cost +"<br>" + Type);
+			
+	}       
+	</script>
+
+
+
+
+</head>
+<body>
+	<div id="display">
+	<form id="vehicleform">
+	<fieldset>
+    <legend>Vehicle form</legend>
+		
+		<input type="text" id="fname" placeholder="Name"> <br> <br>
+		<input type="text" id="desc" placeholder="Description"> <br> <br>
+		<input type="text" id="cost" placeholder="Cost per kilometer"> <br> <br>
+		<select id="type">
+  			<option value="two wheeler">Two wheeler</option>
+  			<option value="four wheeler">Four wheeler</option>
+  		</select>
+
+  		<p class="final">
+        	<input type="submit" value="Submit" onclick="vehicle()" />
+    	</p>
+
+	</fieldset>
+	</form>
+	</div>
+</body>
+</html>
