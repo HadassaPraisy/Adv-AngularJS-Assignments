@@ -2,15 +2,25 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<title> Blur </title>
-</head>
 
+	
+<script>
+	$(document).ready(function(){
+    	$("#field1").blur(function(){
+       		alert("The field1 has lost its focus.");
+    });
+});
+</script>
+
+</head>
 <body>
 
 	<form>
 		<input id="field1" type="text" value="Field 1">
 		<input id="field2" type="text" value="Field 2">
 	</form>
-</body>
 
+</body>
 </html>
